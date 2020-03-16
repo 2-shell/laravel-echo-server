@@ -1,13 +1,8 @@
-FROM node:latest
-MAINTAINER Jessica Smith <jessica.smith@fasthosts.com>
-
-COPY files /
-RUN \
-	npm install -g laravel-echo-server && \
-	cd /opt/laravel-echo-server && \
-	chmod +x entrypoint.sh
+FROM node:alpine
 
 EXPOSE 6001
+WORKDIR /opt/laravel-echo-server
+
 ENV \
 	LARAVEL_ECHO_SERVER_AUTH_HOST=http://localhost \
 	LARAVEL_ECHO_SERVER_DEBUG=false \
@@ -25,6 +20,9 @@ ENV \
 	ECHO_ALLOW_METHODS="GET, POST" \
 	ECHO_ALLOW_HEADERS="Origin, Content-Type, X-Auth-Token, X-Requested-With, Accept, Authorization, X-CSRF-TOKEN, X-Socket-Id"
 
-WORKDIR /opt/laravel-echo-server
+RUN npm install -g laravel-echo-server
+
+COPY files /
+
 ENTRYPOINT ["/opt/laravel-echo-server/entrypoint.sh"]
 CMD ["laravel-echo-server", "start"]
