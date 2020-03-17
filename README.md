@@ -12,12 +12,11 @@ The container is configured to want to use Redis by default. Most configuration 
 
 The variables you can modify are:
 
- - `LARAVEL_ECHO_SERVER_AUTH_HOST` - The host of the server that authenticates private and presence channels
- - `LARAVEL_ECHO_SERVER_HOST` - The host of the server
- - `LARAVEL_ECHO_SERVER_PORT` - The port for the server
- - `LARAVEL_ECHO_SERVER_DEBUG` - Debug mode
- - `ECHO_CLIENTS` - JSON representing the clients for the server
- - `ECHO_DEVMODE` - Same as debug mode?
+ - `ECHO_AUTH_HOST`     - The host of the server that authenticates private and presence channels
+ - `ECHO_AUTH_ENDPOINT` - The endpoint that authenticates private and presence channels
+ - `ECHO_PORT`          - The port for the server
+ - `ECHO_CLIENTS`       - JSON representing the clients for the server
+ - `ECHO_DEVMODE`       - Debug mode
 
 ### Running with SSL
 
