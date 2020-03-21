@@ -1,23 +1,24 @@
 {
-	"authHost": "{{ ECHO_AUTH_HOST }}",
-	"authEndpoint": "{{ ECHO_AUTH_ENDPOINT }}",
+	"authHost": "http://localhost",
+	"authEndpoint": "/broadcasting/auth",
 	"clients": {{ ECHO_CLIENTS }},
 	"database": "redis",
 	"databaseConfig": {
 		"redis": {
-      "port": "{{ ECHO_REDIS_PORT }}",
-      "host": "{{ ECHO_REDIS_HOSTNAME }}"
+            "host": "redis",
+            "port": "6379",
+            "keyPrefix": "{{ ECHO_REDIS_KEY_PREFIX }}"
 		}
 	},
-	"devMode": "{{ ECHO_DEVMODE }}",
+	"devMode": false,
 	"host": null,
-	"port": "{{ ECHO_PORT }}",
-	"protocol": "{{ ECHO_PROTOCOL }}",
+	"port": "6001",
+	"protocol": "http",
 	"socketio": {},
-	"sslCertPath": "{{ ECHO_SSL_CERT_PATH }}",
-	"sslKeyPath": "{{ ECHO_SSL_KEY_PATH }}",
-	"sslCertChainPath": "{{ ECHO_SSL_CHAIN_PATH }}",
-	"sslPassphrase": "{{ ECHO_SSL_PASSPHRASE }}",
+	"sslCertPath": "",
+	"sslKeyPath": "",
+	"sslCertChainPath": "",
+	"sslPassphrase": "",
 	"apiOriginAllow": {
 		"allowCors": {{ ECHO_ALLOW_CORS }},
 		"allowOrigin": "{{ ECHO_ALLOW_ORIGIN }}",

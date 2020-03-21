@@ -4,17 +4,7 @@ EXPOSE 6001
 WORKDIR /opt/laravel-echo-server
 
 ENV \
-	ECHO_AUTH_HOST=http://localhost \
-    ECHO_AUTH_ENDPOINT=/broadcasting/auth \
-	ECHO_SSL_CERT_PATH= \
-	ECHO_SSL_KEY_PATH= \
-	ECHO_SSL_CHAIN_PATH= \
-	ECHO_SSL_PASSPHRASE= \
-    ECHO_PORT=6001 \
-	ECHO_PROTOCOL=http \
-	ECHO_REDIS_PORT=6379 \
-	ECHO_REDIS_HOSTNAME=redis \
-	ECHO_DEVMODE=false \
+    ECHO_REDIS_KEY_PREFIX="laravel-echo-server" \
 	ECHO_CLIENTS=[] \
 	ECHO_ALLOW_CORS=true \
 	ECHO_ALLOW_ORIGIN=http://localhost:80 \
