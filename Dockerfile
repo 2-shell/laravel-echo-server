@@ -4,7 +4,6 @@ EXPOSE 6001
 WORKDIR /opt/laravel-echo-server
 
 ENV \
-    ECHO_REDIS_KEY_PREFIX="laravel-echo-server" \
 	ECHO_CLIENTS=[] \
 	ECHO_ALLOW_CORS=true \
 	ECHO_ALLOW_ORIGIN=http://localhost:80 \

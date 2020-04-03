@@ -6,8 +6,7 @@
 	"databaseConfig": {
 		"redis": {
             "host": "redis",
-            "port": "6379",
-            "keyPrefix": "{{ ECHO_REDIS_KEY_PREFIX }}"
+            "port": "6379"
 		}
 	},
 	"devMode": false,
